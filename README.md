@@ -1,46 +1,55 @@
-# Docker Lab: Containerizing a Three-Tier Application
+# Docker Lab: Containerizing a Three-Tier Application  
 **INET 4031 - Introductions to Systems**
 
-This lab introduces Docker and Docker Compose by having you containerize a
-real, multi-service application. You will package three components: Apache,
-Flask, and MariaDB. These will be packaged into separate containers and wired together so they function as a complete application.
+## Overview
+This project runs a three-tier application using Docker Compose. It includes:
 
-The application code and scaffolding are provided. Your job is to complete the Dockerfiles, verify the stack runs correctly, and document your work below.
+- Apache (web) – handles incoming requests  
+- Flask (app) – backend API  
+- MariaDB (db) – database  
 
-> **Directions and explanations for this lab are on the repository Wiki.**
-> Refer to the Wiki pages for step-by-step instructions.
-
----
-
-*The sections below are for you to fill out. Replace each placeholder with your own content before submitting. Having a detailed README is the best practice for showing your work in future GitHub repositories.*
+The application allows users to view and submit tickets through a web interface. Each service runs in its own container and communicates through Docker networking.
 
 ---
 
-# Project Overview
+## Setup
+```bash
+git clone https://github.com/Shuyus11/inet4031-lab12-docker.git
+cd inet4031-testlab12
+cp .env.example .env
+docker compose up --build
+```
 
-<!-- Briefly describe what this application does in your own words.
-     What problem does it solve? What does a user interact with? -->
+---
 
-# Prerequisites
+## Access
+Open your browser and go to:
 
-<!-- List what needs to be installed or configured on the VM before this lab
-     will work. Include Docker, Docker Compose, and anything else required. -->
+http://localhost
 
-# Getting Started
+---
 
-<!-- Explain how a new teammate would bring this stack up from a fresh clone.
-     Walk through every command they need to run, in order. -->
+## Features
+- REST API (`/api/tickets`)  
+- Persistent data using Docker volumes  
+- Internal communication using service names  
+- Health checks to ensure services are running properly  
 
-# Configuration
+---
 
-<!-- Explain the .env file: what it is, what variables it contains,
-     and what a teammate needs to provide that is not in this repository. -->
+## Useful Commands
+```bash
+docker compose ps
+docker compose logs
+docker compose down
+docker compose down -v
+```
 
-# Verification
+---
 
-<!-- Describe how to confirm the stack is running correctly.
-     Reference the check script and what a passing run looks like. -->
+## Author
+Shu’ayb Yusuf  
+INET 4031
 
-# Feedback (Optional)
 
-<!-- Do you have any feedback you would like to give us after completing this lab? What are some things you enjoyed? What about others that you felt was lackluster? Or maybe there was something that we missed that you'd love for us to touch on! This will help us improve the INET 4031 lab experience. We appreciate everything we can get!  -->
+
