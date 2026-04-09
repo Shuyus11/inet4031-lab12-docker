@@ -19,14 +19,14 @@ cp .env.example .env
 docker compose up --build
 
 
----
+
 
 ## Access
 Open your browser and go to:
 
 http://192.168.56.2/ 
 
----
+
 
 ## Features
 - REST API (/api/tickets)  
@@ -34,7 +34,7 @@ http://192.168.56.2/
 - Internal communication using service names  
 - Health checks to ensure services are running properly  
 
----
+
 
 ## Useful Commands
 docker compose ps
@@ -43,7 +43,7 @@ docker compose down
 docker compose down -v
 
 
----
+
 
 ## Author
 Shu’ayb Yusuf  
