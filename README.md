@@ -13,10 +13,10 @@ The application allows users to view and submit tickets through a web interface.
 
 
 ## Setup
-git clone https://github.com/Shuyus11/inet4031-lab12-docker.git
-cd inet4031-testlab12
-cp .env.example .env
-docker compose up --build
+- git clone https://github.com/Shuyus11/inet4031-lab12-docker.git
+- cd inet4031-testlab12
+- cp .env.example .env
+- docker compose up --build
 
 
 
@@ -37,10 +37,10 @@ http://192.168.56.2/
 
 
 ## Useful Commands
-docker compose ps
-docker compose logs
-docker compose down
-docker compose down -v
+- docker compose ps
+- docker compose logs
+- docker compose down
+- docker compose down -v
 
 
 
